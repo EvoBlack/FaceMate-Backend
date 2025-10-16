@@ -1,0 +1,12 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+mysql-connector-python==8.3.0
+bcrypt==4.0.1
+numpy==1.26.4
+python-dotenv==1.0.0
+opencv-python==4.9.0.80
+torch==2.1.0
+torchvision==0.16.0
+facenet-pytorch==2.5.3
+Pillow>=9.5.0
+gunicorn==21.2.0
