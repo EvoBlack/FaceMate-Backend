@@ -1312,6 +1312,23 @@ def get_divisions():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/', methods=['GET'])
+def index():
+    """Root endpoint - API information"""
+    return jsonify({
+        'message': 'FaceMate Backend API',
+        'version': '1.0.0',
+        'status': 'running',
+        'endpoints': {
+            'health': '/health or /api/health',
+            'auth': '/api/auth/login',
+            'students': '/api/students',
+            'attendance': '/api/attendance',
+            'face_recognition': '/api/face-recognition/*'
+        },
+        'timestamp': datetime.now().isoformat()
+    })
+
 @app.route('/health', methods=['GET'])
 @app.route('/api/health', methods=['GET'])
 def health_check():
